@@ -17,7 +17,7 @@ class Transfer
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
       self.status = "complete"
-      @list_transfer << self
+     
            
   end 
 end
