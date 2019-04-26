@@ -13,6 +13,6 @@ class Transfer
   end 
   
   def excecute_transaction
-    @sender -=
+    @sender
   end 
 end
