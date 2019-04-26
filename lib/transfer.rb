@@ -1,6 +1,7 @@
 class Transfer
   # your code here
   attr_accessor :sender,:receiver,:amount,:status
+  @list_transfer = []
   def initialize(sender,receiver,amount,status= "pending")
     @sender = sender
     @receiver = receiver
@@ -13,8 +14,9 @@ class Transfer
   end 
   
   def execute_transaction
-      self.status = "complete"
       @sender.balance = @sender.balance - @amount
       @receiver.balance = @receiver.balance + @amount
+      self.status = "complete"
+           
   end 
 end
